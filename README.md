@@ -1,21 +1,25 @@
-# Stikeli-PS
+# Stikeli-PS — Pet Adventure Web Game
 
-A standalone browser-based pet-simulator-style game. No Roblox dependency.
+Stikeli-PS is a fully original browser game inspired by the pet-simulator genre. It is designed for GitHub Pages as a static HTML/CSS/JavaScript site.
 
 ## Included
-- Pet collection, upgrades, leveling and equipment
-- Eggs and rarity-based hatching
-- Breakable objects with damage/rewards
+- Playable breakable/coin progression loop
+- Pet inventory, equip-best, variants and fusion
+- Egg gallery and auto-hatch
 - 10 worlds / 50 areas
-- Progression, quests, achievements and profile statistics
-- Trading Plaza simulation and marketplace listings
-- Admin panel for testing
-- Responsive desktop/mobile layout
-- Local persistent save via `localStorage`
-- Original names, visuals and mechanics; no copied game assets
+- 500 generated pet definitions / 100 eggs
+- Quests and 100 achievements
+- Upgrade system
+- Marketplace and local trading simulation
+- Player profile and diagnostics
+- Responsive desktop/mobile UI
+- Local persistent save via localStorage
+- Developer/admin test console
 
-## Run
-Open `index.html` in a browser, or enable GitHub Pages for the repository. The game is a static web app and needs no build step.
+## Important hosting note
+GitHub Pages serves static files and does not provide an application server or database. Therefore this version stores player progress locally in the browser and uses local simulation for marketplace/trading. True cross-player real-time trading, accounts, global chat and server-side persistence require a separate backend service. GitHub Pages itself supports static HTML/CSS/JavaScript publishing but not server-side languages such as PHP, Ruby or Python.
 
-## Multiplayer note
-A static GitHub Pages site cannot securely provide real cross-user multiplayer trading or server-side accounts by itself. Stikeli-PS therefore implements the gameplay and marketplace/trading interfaces locally in the browser. A later backend can replace the local persistence layer without changing the UI architecture.
+## Publish with GitHub Pages
+Repository **Settings → Pages → Deploy from branch → main → / (root)**.
+
+This project uses only original names, layouts, code and generated emoji-based visuals; it is not affiliated with or a 1:1 copy of any other game.
