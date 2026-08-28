@@ -17,7 +17,7 @@ Stikeli-PS is a fully original browser game inspired by the pet-simulator genre.
 - Developer/admin test console
 
 ## Important hosting note
-GitHub Pages serves static files and does not provide an application server or database. Therefore this version stores player progress locally in the browser and uses local simulation for marketplace/trading. True cross-player real-time trading, accounts, global chat and server-side persistence require a separate backend service. GitHub Pages itself supports static HTML/CSS/JavaScript publishing but not server-side languages such as PHP, Ruby or Python.
+GitHub Pages serves static files and does not provide an application server or database. Therefore this version stores player progress locally in the browser and uses local simulation for marketplace/trading. True cross-player real-time trading, accounts, global chat and server-side persistence require a separate backend service.
 
 ## Publish with GitHub Pages
 Repository **Settings → Pages → Deploy from branch → main → / (root)**.
