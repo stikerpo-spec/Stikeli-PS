@@ -1,20 +1,21 @@
 # Stikeli-PS
 
-A fully original Roblox pet-simulator-style game foundation built around server authority, persistent progression, procedurally generated content, and expandable services.
+A standalone browser-based pet-simulator-style game. No Roblox dependency.
 
-## Design
-- Original names, visuals, mechanics, and generated assets.
-- Client handles input/presentation; server owns currencies, pets, hatching, areas, trades, and saves.
-- 10 worlds / 50 areas are generated from config.
-- 500 pet definitions and 100 eggs are generated from deterministic config data.
-- DataStore retries, autosave, shutdown save, validation, rate limits, trade locking, quests, bosses, events and responsive UI are included in the foundation.
+## Included
+- Pet collection, upgrades, leveling and equipment
+- Eggs and rarity-based hatching
+- Breakable objects with damage/rewards
+- 10 worlds / 50 areas
+- Progression, quests, achievements and profile statistics
+- Trading Plaza simulation and marketplace listings
+- Admin panel for testing
+- Responsive desktop/mobile layout
+- Local persistent save via `localStorage`
+- Original names, visuals and mechanics; no copied game assets
 
-## Studio setup
-1. Install Rojo (7.x).
-2. Clone this repository.
-3. Run `rojo serve` from the repository folder.
-4. Connect Roblox Studio to the Rojo server.
-5. Publish the place and enable **Game Settings → Security → Enable Studio Access to API Services** for Studio testing of DataStores.
-6. Play-test with **Start Server + Players** to test server authority and trading.
+## Run
+Open `index.html` in a browser, or enable GitHub Pages for the repository. The game is a static web app and needs no build step.
 
-The project intentionally uses procedural Roblox Parts/UI so no third-party or copied game assets are required.
+## Multiplayer note
+A static GitHub Pages site cannot securely provide real cross-user multiplayer trading or server-side accounts by itself. Stikeli-PS therefore implements the gameplay and marketplace/trading interfaces locally in the browser. A later backend can replace the local persistence layer without changing the UI architecture.
