@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stikeli PS99 Values</title>
+<meta name="description" content="Stikeli PS99 Values – Pets, RAP, Exists, Max Pay, Favoriten, Vergleich und Admin Panel.">
+<link rel="preconnect" href="https://ps99.biggamesapi.io">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="logo">🐾</span><span><b>Stikeli</b><small>PS99 VALUES</small></span></a>
+  <nav><button class="nav active" data-view="values">Values</button><button class="nav" data-view="favorites">⭐ Favoriten</button><button class="nav" data-view="compare">⚖ Vergleich</button><button class="nav" data-view="calculator">🧮 Rechner</button></nav>
+  <div class="tools"><span id="status" class="status"><i></i> Live</span><button id="theme" class="icon">☼</button><button id="refresh" class="icon">↻</button><button id="adminOpen" class="admin-btn">🛠 Admin</button></div>
+</header>
+<main>
+<section class="hero">
+ <div><div class="eyebrow">PET SIMULATOR 99 · VALUE DATABASE</div><h1>Alle Pets. <em>Alle Values.</em><br>Einfach finden.</h1><p>PS99-Pets durchsuchen, RAP und Exists ansehen, nach Low → High oder High → Low sortieren und deine eigenen Max-Pay-Regeln verwalten.</p><div class="hero-actions"><button class="primary" id="bestDeals">🔥 Top Deals</button><button class="secondary" id="randomPet">🎲 Zufälliges Pet</button></div></div>
+ <div class="hero-card"><div class="hero-label">DATABASE</div><strong id="count">—</strong><span>Pet-Varianten geladen</span><div class="mini"><div><b id="rapCount">—</b><small>mit RAP</small></div><div><b id="hugeCount">—</b><small>Huge</small></div><div><b id="favCount">0</b><small>Favoriten</small></div></div></div>
+</section>
+<section class="stats"><div><span>💎 Höchster RAP</span><b id="highest">—</b></div><div><span>📉 Niedrigster RAP</span><b id="lowest">—</b></div><div><span>🏆 Teuerstes Pet</span><b id="topName">—</b></div><div><span>📦 Seltenstes Exists</span><b id="scarce">—</b></div></section>
+<section class="layout">
+<aside class="sidebar">
+ <div class="side-title"><b>Filter</b><button id="reset">Reset</button></div>
+ <label class="search"><span>⌕</span><input id="search" placeholder="Pet suchen…"><kbd>/</kbd></label>
+ <div class="group"><label>Kategorie</label><div class="chips" id="category"><button class="active" data-v="all">Alle</button><button data-v="Huge">Huge</button><button data-v="Titanic">Titanic</button><button data-v="Exclusive">Exclusive</button><button data-v="Normal">Normal</button></div></div>
+ <div class="group"><label>Variante</label><div class="chips" id="variant"><button class="active" data-v="all">Alle</button><button data-v="normal">Normal</button><button data-v="gold">Golden</button><button data-v="rainbow">Rainbow</button><button data-v="shiny">Shiny</button></div></div>
+ <div class="group"><label>RAP Bereich</label><div class="two"><input id="min" type="number" placeholder="Min"><span>–</span><input id="max" type="number" placeholder="Max"></div></div>
+ <div class="group"><label>Weitere Filter</label><label class="check"><input id="onlyRap" type="checkbox"><span></span>Nur mit RAP</label><label class="check"><input id="onlyFav" type="checkbox"><span></span>Nur Favoriten</label><label class="check"><input id="onlyHuge" type="checkbox"><span></span>Nur Huge / Titanic</label></div>
+ <div class="tip"><b>💡 Max Pay</b><p>Max Pay ist deine eigene Kaufgrenze. Standardmäßig wird sie aus dem RAP berechnet und kann im Admin Panel geändert werden.</p></div>
+</aside>
+<section class="content">
+ <div class="content-top"><div><b id="results">0</b> Pets gefunden</div><div class="sort"><span>Sortieren</span><select id="sort"><option value="rapDesc">RAP hoch → niedrig</option><option value="rapAsc">RAP niedrig → hoch</option><option value="existsAsc">Exists niedrig → hoch</option><option value="existsDesc">Exists hoch → niedrig</option><option value="name">Name A–Z</option><option value="maxDesc">Max Pay hoch → niedrig</option></select><button class="icon" id="gridToggle">▦</button></div></div>
+ <div id="grid" class="grid"></div><button id="more" class="more">Mehr anzeigen</button><div id="empty" class="empty hidden"><b>Keine Pets gefunden</b><span>Ändere deine Suche oder Filter.</span></div>
+</section>
+</section>
+</main>
+<div id="drawer" class="drawer"><div class="backdrop"></div><aside class="drawer-card"><button class="close" id="close">×</button><div id="detail"></div></aside></div>
+<div id="admin" class="modal"><div class="modal-bg"></div><div class="modal-card"><button class="close" id="adminClose">×</button><div id="adminBody"></div></div></div>
+<div id="toast" class="toast"></div>
+<footer>Stikeli PS99 Values · Datenquelle: BIG Games Public API · RAP = Recent Average Price</footer>
+<script src="app.js"></script>
+</body></html>
